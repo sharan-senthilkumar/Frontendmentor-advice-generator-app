@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="{{ url_for('static', filename='images/favicon-32x32.png') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static',filename='css/style.css')}}"
+    />
+    <title>Frontend Mentor | Advice generator app</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color:white;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <p class="title">Advice #{{id}}</p>
+        <p class="advice">"{{advice}}"</p>
+        <picture class="linebrak">
+          <source
+            media="(max-width:450px)"
+            srcset="
+              {{url_for('static',filename='images/pattern-divider-mobile.svg')}}
+            "
+          />
+          <img
+            src="{{url_for('static',filename='images/pattern-divider-desktop.svg')}}"
+            alt=""
+          />
+        </picture>
+      </div>
+      <div class="button">
+        <a href="{{url_for('index')}}">
+        <img  src="{{url_for('static',filename='images/icon-dice.svg')}}" alt="" />
+      </a>
+      </div>
+
+     
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://www.frontendmentor.io/profile/sharan-senthilkumar">Sharan SG</a>.
+    </div>
+  </body>
+</html>

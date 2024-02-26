@@ -1,0 +1,80 @@
+:root{
+    --Light-Cyan: hsl(193, 38%, 86%);
+    --Neon-Green: hsl(150, 100%, 66%);
+
+    --Grayish-Blue: hsl(217, 19%, 38%);
+    --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+    --Dark-Blue: hsl(218, 23%, 16%);
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Manrope", sans-serif;
+    font-weight: 800;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--Dark-Blue);
+}
+
+.card{
+    width:500px;
+    padding:1rem;
+    color:var(--Light-Cyan);
+    text-align: center;
+    background: var(--Dark-Grayish-Blue);
+    border-radius: 1rem;
+}
+
+.title{
+    text-transform: uppercase;
+    letter-spacing: .15cm;
+    color: var(--Neon-Green);
+    margin: 1rem auto;
+}
+
+.advice{
+    font-size: 1.75rem;
+    margin:1rem auto;
+}
+
+img{
+    width:100%;
+    margin: 1rem auto 2rem auto;
+}
+
+.button{
+    background: var(--Neon-Green);
+    width:60px;
+    height:60px;
+    padding:0 .9rem;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom:2rem;
+    transition-duration: .5s;
+}
+
+.button:hover {
+    box-shadow: 0 0 20px 5px var(--Neon-Green); /* Adjust spread radius as needed */
+  }
+.button > img{
+    width: 20px;
+    height:20px;
+}
+
+@media screen and (max-width:430px) {
+    .card{
+        width:350px;
+    }
+    
+}
